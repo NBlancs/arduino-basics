@@ -1,0 +1,22 @@
+const int ledPin = 13;
+const int buttonPin = 12;
+
+int buttonState;
+
+void setup() {
+  // put your setup code here, to run once:
+  digitalWrite(ledPin, OUTPUT);
+  digitalWrite (buttonPin, INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState == HIGH) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+}
